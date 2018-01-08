@@ -613,6 +613,8 @@ header{
         display:block;
         padding-top:100%;
         width:100%;
+        position:relative;
+        z-index:-1;
     }
 
     .box__icon{
@@ -624,6 +626,8 @@ header{
     .box__topTtl{
         font-size:4.3vw;
         position:absolute;
+        letter-spacing:1px;
+        letter-spacing:1px;
     }
 
     .box__wrap{
@@ -651,7 +655,7 @@ header{
 
     .box__ttl{
         font-size:4.2vw;
-        padding-bottom:6%;
+        padding-bottom:8%;
     }
 
     .box__txt{
