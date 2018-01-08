@@ -1,0 +1,143 @@
+<!doctype html>
+<!--[if IE 6]> <html class="ie6"> <![endif]-->
+<!--[if IE 7]> <html class="ie7"> <![endif]-->
+<!--[if IE 8]> <html class="ie8"> <![endif]-->
+<!--[if IE 9]> <html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="ja">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<!--page info-->
+<title>Christmas Card</title>
+<meta name="description" content="description1" />
+<meta name="keywords" content="key1,key1,key1" />
+<!--og-->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="" />
+<meta property="og:image" content="" />
+<meta property="og:title" content="" />
+<meta property="og:description" content="" />
+<meta property="og:site_name" content="" />
+<!--css-->
+<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../assets/css/index.css" media="all" />
+<!--js-->
+
+
+
+<!--[if lt IE 10]>
+<script type="text/javascript" src="assets/js/html5shiv.min.js"></script>
+<script type="text/javascript" src="assets/js/respond.min.js"></script>
+<script type="text/javascript" src="assets/js/flexibility.js"><kyo/script>
+<![endif]-->
+
+</head>
+<body>
+    <div id="xmas">
+        <canvas id="snow"></canvas>
+        <div class="wrap">
+            <div class="dear">
+                dear all
+            </div>
+            <h1>
+                "Merry Xmas"
+            </h1>
+            <div class="message">
+                I hope that your Christmas would be enjoyable and<br class="pci"> may the essence of Christmas remain always with you. <br class="pci">Merry Christmas and Happy New year!
+            </div>
+            <div class="day">
+                december 25 2016
+            </div>
+        </div>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/EaselJS/0.8.0/easeljs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+<script type="text/babel">
+
+'use strict';
+
+class Crystal {
+    constructor(width = window.innerWidth, height = window.innerHeight) {
+//        円のシェイプを作成
+        this.shape = new createjs.Shape();
+
+        const radius = _.random(2, 4);
+        this.shape.graphics.beginFill('rgba(255,255,255,0.5)').drawCircle(0, 0, radius);
+        this.shape.x = _.random(radius, width - radius);
+        this.shape.y = _.random(-height, -radius);
+
+        this.shape.addEventListener('mouseover', this.onMouseOver.bind(this));
+    }
+    onMouseOver() {
+        this.fadeOut()
+            .then(this.reset.bind(this));
+    }
+    fadeOut() {
+        return new Promise(done => {
+            const handler = () => {
+                if (this.shape.alpha <= 0) {
+                    this.shape.removeEventListener('tick', handler);
+                    return done();
+                }
+
+                this.shape.alpha -= 0.05;
+            }
+            this.shape.addEventListener('tick', handler);
+        });
+    }
+    reset() {
+        const radius = this.shape.graphics.command.radius;
+        this.shape.y = -radius;
+        this.shape.alpha = 1;
+    }
+}
+
+class Snow {
+    constructor(canvas) {
+        this.canvas = canvas;
+        this.stage = new createjs.Stage(this.canvas);
+        this.stage.enableMouseOver(this.length);
+        this.setSize();
+
+        createjs.Ticker.framerate = 1500;
+        createjs.Ticker.addEventListener('tick', this.onTick.bind(this));
+        window.addEventListener('resize', this.setSize.bind(this));
+    }
+    setSize() {
+        this.width = window.innerWidth;
+        this.height = window.innerHeight;
+        this.canvas.width = this.width;
+        this.canvas.height = this.height;
+        this.length = Math.floor(this.width * this.height / 1000);
+
+        if (this.crystals) {
+            this.stage.removeChild(...this.crystals);
+        }
+
+        this.crystals = _.times(this.length, () =>
+                                new Crystal(this.width, this.height).shape);
+
+        this.stage.addChild(...this.crystals);
+    }
+    onTick() {
+        this.crystals.forEach((crystal, i) => {
+            const radius = crystal.graphics.command.radius;
+
+            crystal.y - radius > this.height
+                ? crystal.y = -radius
+            : crystal.y += (i % 3 + 1) * 0.05;
+        });
+
+        this.stage.update();
+    }
+}
+
+new Snow(document.getElementById('snow'));
+
+</script>
+</body>
+
+</html>
