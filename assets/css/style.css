@@ -266,6 +266,10 @@ header{
 
 }
 
+footer{
+
+}
+
 .contents{
     max-width:1200px;
     margin:0 auto;
@@ -405,42 +409,54 @@ header{
     z-index:-1;
 }
 
-.box__link--01{}
+.box__link--01{
+
+}
 
 .box__link--01:after{
     content:"\f1bb";
     font-size:150px;
 }
 
-.box__link--01:hover{}
+.box__link--01:hover{
+
+}
 
 .box__link--01:hover:after{
     color:cadetblue;
     font-size:170px;
 }
 
-.box__link--02{}
+.box__link--02{
+
+}
 
 .box__link--02:after{
     content:"\f1fd";
     font-size:130px;
 }
 
-.box__link--02:hover{}
+.box__link--02:hover{
+
+}
 
 .box__link--02:hover:after{
     color:#facdc8;
     font-size:160px;
 }
 
-.box__link--03{}
+.box__link--03{
+
+}
 
 .box__link--03:after{
     content:"\f022";
     font-size:130px;
 }
 
-.box__link--03:hover{}
+.box__link--03:hover{
+
+}
 
 .box__link--03:hover:after{
     color:#b1dde6;
@@ -462,70 +478,90 @@ header{
             justify-content:center;
 }
 
-.box__link--tw{}
+.box__link--tw{
+
+}
 
 .box__link--tw:after{
     content:"\f099";
     font-size:70px;
 }
 
-.box__link--tw:hover{}
+.box__link--tw:hover{
+
+}
 
 .box__link--tw:hover:after{
     color:#55acee;
     font-size:80px;
 }
 
-.box__link--inst{}
+.box__link--inst{
+
+}
 
 .box__link--inst:after{
     content:"\f16d";
     font-size:60px;
 }
 
-.box__link--inst:hover{}
+.box__link--inst:hover{
+
+}
 
 .box__link--inst:hover:after{
     color:#3f729b;
     font-size:70px;
 }
 
-.box__link--git{}
+.box__link--git{
+
+}
 
 .box__link--git:after{
     content:"\f09b";
     font-size:70px;
 }
 
-.box__link--git:hover{}
+.box__link--git:hover{
+
+}
 
 .box__link--git:hover:after{
     color:#4183c4;
     font-size:80px;
 }
 
-.box__link--blog{}
+.box__link--blog{
+
+}
 
 .box__link--blog:after{
     content:"\f09e";
     font-size:60px;
 }
 
-.box__link--blog:hover{}
+.box__link--blog:hover{
+
+}
 
 .box__link--blog:hover:after{
     color:#008fde;
     font-size:70px;
 }
 
-.box__link--mail{}
+.box__link--mail{
+
+}
 
 .box__link--mail:after{
     content:"\f003";
     font-size:60px;
 }
 
-.box__link--mail:hover{}
+.box__link--mail:hover{
+
+}
 
 .box__link--mail:hover:after{
     color:#e6bab1;
