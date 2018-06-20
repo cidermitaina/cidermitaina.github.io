@@ -463,6 +463,42 @@ footer{
     font-size:160px;
 }
 
+.box__link--04{
+
+}
+
+.box__link--04:after{
+    content:"\f0e5";
+    font-size:130px;
+}
+
+.box__link--04:hover{
+
+}
+
+.box__link--04:hover:after{
+    color:#ffdead;
+    font-size:160px;
+}
+
+.box__link--05{
+
+}
+
+.box__link--05:after{
+    content:"\f0db";
+    font-size:130px;
+}
+
+.box__link--05:hover{
+
+}
+
+.box__link--05:hover:after{
+    color:#b1dde6;
+    font-size:160px;
+}
+
 .box__link--sns{
     display:-webkit-box;
     display:-webkit-flex;
@@ -733,6 +769,26 @@ footer{
     }
 
     .box__link--03:hover:after{
+        font-size:18vw;
+        padding-bottom:3%;
+    }
+
+    .box__link--04:after{
+        font-size:12vw;
+        padding-bottom:3%;
+    }
+
+    .box__link--04:hover:after{
+        font-size:18vw;
+        padding-bottom:3%;
+    }
+
+    .box__link--05:after{
+        font-size:12vw;
+        padding-bottom:3%;
+    }
+
+    .box__link--05:hover:after{
         font-size:18vw;
         padding-bottom:3%;
     }
