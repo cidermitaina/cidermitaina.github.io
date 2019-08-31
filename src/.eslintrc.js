@@ -18,6 +18,11 @@ module.exports = {
     project: './tsconfig.json',
     sourceType: 'module'
   },
+  settings: {
+    'react': {
+      'version': 'detect'
+    }
+  },
   plugins: ['@typescript-eslint', 'react'],
   root: true,
   rules: {
