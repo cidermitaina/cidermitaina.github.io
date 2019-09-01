@@ -2,6 +2,7 @@
   "name": "cidermitaina.github.io",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://cidermitaina.github.io/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.22",
     "@fortawesome/free-solid-svg-icons": "^5.10.2",
@@ -21,7 +22,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint --ext ./ 'src/**/*.{js,jsx,ts,tsx}'; stylelint 'src/**/*.scss'"
+    "lint": "eslint --ext ./ 'src/**/*.{js,jsx,ts,tsx}'; stylelint 'src/**/*.scss'",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -42,6 +44,7 @@
     "@typescript-eslint/eslint-plugin": "^2.0.0",
     "@typescript-eslint/parser": "^2.0.0",
     "eslint-plugin-react": "^7.14.3",
+    "gh-pages": "^2.1.1",
     "node-sass": "^4.12.0",
     "stylelint": "^10.1.0",
     "stylelint-config-standard": "^18.3.0",
