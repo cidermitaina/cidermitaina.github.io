@@ -40,6 +40,9 @@ module.exports = {
     'prefer-arrow-callback': 'error',
     'prefer-const': 'error',
     'prefer-spread': 'error',
+    "react/prop-types": [
+      0
+    ],
     'require-yield': 'error'
   }
 };

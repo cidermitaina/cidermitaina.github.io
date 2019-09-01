@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+/**
+ * define valiables
+ * 各scssファイルでよく使う値を変数定義
+ */
+
+//ブレイクポイント
+$breakPoint: 768px;
+
+//サイト全体のフォントカラー
+$color_txt: #464646;
+
+//リンクの設定
+$color_lnk: #01499d;//リンクのカラー
+$link_deco:none;//リンクのデコレーション設定
+
+//フォーム系
+$color_key: #e60000;
+$color_placeholder: #e2e2e2;
+$color_bg: #fff;
+$color_consultant: #d29b00;
+$color_researcher: #1b4b7d;
+
+//baseのfont-size
+$base_fs: 14;

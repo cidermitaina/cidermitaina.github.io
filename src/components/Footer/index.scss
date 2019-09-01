@@ -1,0 +1,29 @@
+@import '../../styles/mixin.scss';
+
+.footer {
+  border-bottom: 1px solid #000;
+  padding: 10px 0;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  position: relative;
+  text-align: center;
+
+  @include sp {
+    border-left: 2px solid #000;
+    border-right: 1px solid #000;
+    box-sizing: border-box;
+    font-size: 3vw;
+    margin-left: -1px;
+    width: 100%;
+  }
+}
+
+.footer__text {
+  font-family: 'YuGothic', '游ゴシック', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ヒラギノ丸ゴ ProN W4', 'Hiragino Maru Gothic ProN', 'ヒラギノ丸ゴ Pro W4', 'Hiragino Maru Gothic Pro', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', 'MS PGothic', Sans-Serif;
+  font-size: 13px;
+  letter-spacing: 2px;
+
+  @include sp {
+    font-size: 3vw;
+  }
+}
