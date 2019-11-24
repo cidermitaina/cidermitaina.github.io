@@ -1,4 +1,4 @@
-@import '../../styles/mixin.scss';
+@import "../../styles/mixin.scss";
 
 .contents {
   display: flex;
@@ -36,7 +36,7 @@
     z-index: 0;
 
     &::before {
-      content: '';
+      content: "";
       display: block;
       padding-top: 100%;
       width: 100%;
@@ -46,7 +46,7 @@
 }
 
 .box__top-title {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 25px;
   letter-spacing: 1.6px;
 
@@ -161,7 +161,7 @@
     z-index: 2;
   }
 
-/* stylelint-disable */
+  /* stylelint-disable */
   &::after {
     color: #ededed;
     font-family: FontAwesome;
@@ -183,7 +183,7 @@
 
 .box__link--file-code {
   &::after {
-    content: '\f1c9';
+    content: "\f1c9";
     font-size: 130px;
 
     @include sp {
@@ -207,7 +207,7 @@
 
 .box__link--xmas {
   &::after {
-    content: '\f1bb';
+    content: "\f1bb";
     font-size: 150px;
 
     @include sp {
@@ -231,7 +231,7 @@
 
 .box__link--cake {
   &::after {
-    content: '\f1fd';
+    content: "\f1fd";
     font-size: 130px;
 
     @include sp {
@@ -255,7 +255,7 @@
 
 .box__link--file {
   &::after {
-    content: '\f0db';
+    content: "\f0db";
     font-size: 130px;
 
     @include sp {
@@ -279,7 +279,7 @@
 
 .box__link--balloon {
   &::after {
-    content: '\f0e5';
+    content: "\f0e5";
     font-size: 130px;
 
     @include sp {
@@ -301,9 +301,33 @@
   }
 }
 
+.box__link--mug-hot {
+  &::after {
+    content: "\f0f4";
+    font-size: 130px;
+
+    @include sp {
+      font-size: 12vw;
+      padding-bottom: 3%;
+    }
+  }
+
+  &:hover {
+    &::after {
+      color: rgb(245, 239, 224);
+      font-size: 160px;
+
+      @include sp {
+        font-size: 18vw;
+        padding-bottom: 3%;
+      }
+    }
+  }
+}
+
 .box__link--twitter {
   &::after {
-    content: '\f099';
+    content: "\f099";
     font-size: 70px;
 
     @include sp {
@@ -325,7 +349,7 @@
 
 .box__link--instagram {
   &::after {
-    content: '\f16d';
+    content: "\f16d";
     font-size: 60px;
 
     @include sp {
@@ -347,7 +371,7 @@
 
 .box__link--github {
   &::after {
-    content: '\f09b';
+    content: "\f09b";
     font-size: 70px;
 
     @include sp {
@@ -369,7 +393,7 @@
 
 .box__link--blog {
   &::after {
-    content: '\f09e';
+    content: "\f09e";
     font-size: 60px;
 
     @include sp {
