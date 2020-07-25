@@ -6,7 +6,7 @@ const Works: FC = () => {
 
   const contactItems: ContactItems[] = [
     {
-      title: 'Twiiter',
+      title: 'Twitter',
       link: 'https://twitter.com/cidermitaina',
       icon: 'twitter',
     },
