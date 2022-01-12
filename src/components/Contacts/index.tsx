@@ -12,7 +12,7 @@ const Works: FC = () => {
     },
     {
       title: 'Instagram',
-      link: 'https://www.instagram.com/stsiiii/',
+      link: 'https://www.instagram.com/cidermitaina/',
       icon: 'instagram',
     },
     {

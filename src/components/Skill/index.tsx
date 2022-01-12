@@ -5,7 +5,7 @@ import Contents, { ContentItems } from '../Contents';
 const Like: FC = () => {
   const contentItems: ContentItems[] = [
     {
-      content1: 'HTML / CSS / Sass / SCSS / PostCSS / JavaScript / jQuery / PHP / WordPress / gulp / git /',
+      content1: 'HTML / CSS / JavaScript / TypeScript / React / Ruby /',
       content2: '',
     },
   ];
